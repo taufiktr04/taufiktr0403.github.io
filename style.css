@@ -1,0 +1,341 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Style+Script&display=swap");
+
+/* Reset CSS */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  /* Colors */
+  --primary-color: #fab8ad;
+  --secondary-color: #ffffff;
+  --text-color: #1d1d1d;
+
+  /* Fonts */
+  --name-font: "Style Script", cursive;
+  --body-font: "Poppins", sans-sderif;
+  --very-big-font: 4rem;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+
+  /* Margin */
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 5rem;
+
+  /* Z Index */
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+body {
+  border: var(--big-font-size) solid var(--primary-color);
+  padding: var(--mb-5);
+  font-family: var(--body-font);
+  display: grid;
+  grid-template-areas:
+    "a1 a2 a3"
+    "b1 obj obj"
+    "c1 skl skl"
+    "d1 xp xp";
+  grid-template-columns: 1fr 0.5fr 1fr;
+}
+
+img {
+  grid-area: a1;
+  width: 250px;
+  justify-self: center;
+}
+
+.name {
+  grid-area: a2;
+  font-family: var(--name-font);
+  font-size: var(--very-big-font);
+}
+
+.job {
+  font-family: var(--body-font);
+  font-size: var(--big-font-size);
+}
+
+.contact {
+  grid-area: a3;
+  font-size: var(--big-font-size);
+}
+
+.contact li {
+  margin-top: var(--mb-1);
+}
+
+.contact li div {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.bx {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.bx:hover {
+  color: var(--primary-color);
+}
+
+ul li {
+  list-style: none;
+}
+
+.profile {
+  grid-area: b1;
+  padding: 0 var(--mb-6);
+  margin: var(--mb-2);
+  text-align: justify;
+  font-family: var(--body-font);
+}
+
+.profile h2 {
+  font-size: var(--h2-font-size);
+  text-align: center;
+  border: 2px solid black;
+  text-transform: uppercase;
+}
+
+.profile p {
+  font-size: var(--normal-font-size);
+}
+
+.objective {
+  grid-area: obj;
+  margin: var(--mb-2) 0;
+  text-align: justify;
+}
+
+.objective h2 {
+  font-size: var(--h2-font-size);
+  border: 2px solid black;
+  text-align: center;
+  width: 30vw;
+  text-transform: uppercase;
+}
+
+.objective p {
+  font-size: var(--normal-font-size);
+}
+
+.education {
+  grid-area: c1;
+  padding: 0 var(--mb-6);
+  margin: var(--mb-2);
+  text-align: justify;
+}
+
+.education h2 {
+  font-size: var(--h2-font-size);
+  text-align: center;
+  border: 2px solid black;
+  text-transform: uppercase;
+}
+
+.education ul li {
+  font-size: var(--normal-font-size);
+  line-height: 200%;
+}
+
+.skills {
+  grid-area: skl;
+  margin: var(--mb-2) 0;
+  text-align: justify;
+}
+
+.skills h2 {
+  font-size: var(--h2-font-size);
+  border: 2px solid black;
+  text-align: center;
+  width: 30vw;
+  text-transform: uppercase;
+}
+
+.skills ul li {
+  font-size: var(--normal-font-size);
+  line-height: 200%;
+  list-style: disc;
+  margin-left: 18px;
+}
+
+.hobbies {
+  grid-area: d1;
+  padding: 0 var(--mb-6);
+  margin: var(--mb-2);
+  text-align: justify;
+}
+
+.hobbies h2 {
+  font-size: var(--h2-font-size);
+  text-align: center;
+  border: 2px solid black;
+  text-transform: uppercase;
+}
+
+.hobbies ul {
+  margin-top: 1rem;
+}
+.hobbies ul li {
+  line-height: 200%;
+}
+
+.hobbies ul li i {
+  font-size: 2rem;
+}
+
+.hobbies ul li div {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.experiences {
+  grid-area: xp;
+  margin: var(--mb-2) 0;
+  text-align: justify;
+}
+
+.experiences h2 {
+  font-size: var(--h2-font-size);
+  border: 2px solid black;
+  text-align: center;
+  width: 30vw;
+  text-transform: uppercase;
+}
+
+.experiences ul li {
+  font-size: var(--normal-font-size);
+  line-height: 200%;
+  list-style: disc;
+  margin-left: 18px;
+}
+
+/* Breakpoints */
+
+/* Smartphone */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    grid-template-areas:
+      "a1 a2"
+      "contact contact"
+      "profile profile"
+      "objectives objectives"
+      "education education"
+      "skills skills"
+      "experiences experiences"
+      "hobbies hobbies";
+    grid-template-columns: 1fr 0.5fr;
+  }
+
+  img {
+    padding: var(--mb-2);
+    grid-area: a1;
+  }
+
+  .name {
+    margin-right: var(--mb-2);
+    grid-area: a2;
+    font-family: var(--name-font);
+    font-size: var(--very-big-font);
+  }
+
+  .job {
+    font-family: var(--body-font);
+  }
+
+  .profile {
+    padding: var(--mb-2);
+    margin: 0;
+    grid-area: profile;
+    text-align: justify;
+    font-family: var(--body-font);
+  }
+
+  .contact {
+    grid-area: contact;
+    font-size: var(--big-font-size);
+    text-align: center;
+  }
+
+  .contact li {
+    margin-top: var(--mb-1);
+    display: inline-block;
+  }
+
+  .contact li div {
+    display: none;
+  }
+
+  .objective {
+    padding: var(--mb-2);
+    grid-area: objectives;
+    text-align: justify;
+  }
+
+  .objective h2 {
+    width: 100%;
+  }
+
+  .education {
+    grid-area: education;
+    text-align: justify;
+    margin: 0;
+    padding: var(--mb-2);
+  }
+
+  .education ul li {
+    list-style: disc;
+    margin-left: 18px;
+  }
+
+  .skills {
+    grid-area: skills;
+    text-align: justify;
+    margin: 0;
+    padding: var(--mb-2);
+  }
+
+  .skills h2 {
+    width: 100%;
+  }
+
+  .experiences {
+    grid-area: experiences;
+    text-align: justify;
+    margin: 0;
+    padding: var(--mb-2);
+  }
+
+  .experiences h2 {
+    width: 100%;
+  }
+
+  .hobbies {
+    grid-area: hobbies;
+    text-align: justify;
+    margin: 0;
+    padding: var(--mb-2);
+  }
+
+  .hobbies ul li {
+    display: inline-block;
+  }
+}
