@@ -21,6 +21,7 @@
   --name-font: "Style Script", cursive;
   --body-font: "Poppins", sans-sderif;
   --very-big-font: 4rem;
+  --med-big-font: 3rem;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
@@ -41,8 +42,11 @@
 }
 
 body {
-  /* border: var(--big-font-size) solid var(--primary-color); */
+  border: var(--big-font-size) solid var(--primary-color);
+}
+.container {
   /* padding: var(--mb-5); */
+  margin: var(--mb-5);
   font-family: var(--body-font);
   display: grid;
   grid-template-areas:
@@ -233,10 +237,11 @@ ul li {
     margin: 0;
     padding: 0;
   }
-  body {
-    /* padding: 0;
-    margin: 0; */
-    box-sizing: border-box;
+  .container {
+    /* padding: var(--mb-3); */
+    /* margin: var(--mb-3); */
+    /* width: 100vw; */
+    /* box-sizing: border-box; */
     grid-template-areas:
       "a1 a2"
       "contact contact"
@@ -246,23 +251,25 @@ ul li {
       "skills skills"
       "experiences experiences"
       "hobbies hobbies";
-    grid-template-columns: 1fr 0.5fr;
+    grid-template-columns: 1fr;
   }
 
   img {
     padding: var(--mb-2);
     grid-area: a1;
+    width: 200px;
   }
 
   .name {
     margin-right: var(--mb-2);
     grid-area: a2;
     font-family: var(--name-font);
-    font-size: var(--very-big-font);
+    font-size: var(--med-big-font);
   }
 
   .job {
     font-family: var(--body-font);
+    font-size: var(--h2-font-size);
   }
 
   .profile {
@@ -334,7 +341,7 @@ ul li {
 
   .hobbies {
     grid-area: hobbies;
-    text-align: justify;
+    /* text-align: justify; */
     margin: 0;
     padding: var(--mb-2);
   }
